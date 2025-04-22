@@ -1,0 +1,263 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: url("./img/启动页面素材/启动页面1/背景.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  position: relative;
+  transition: opacity 0.5s ease;
+}
+.fade-out {
+  opacity: 0;
+}
+
+img {
+  position: absolute;
+  display: inline-block;
+}
+
+.tian {
+  width: 90vw;
+  bottom: -100vh;
+  left: 60px;
+  align-self: center;
+}
+
+.cloth {
+  width: 40vw;
+  z-index: 1;
+}
+
+@keyframes cloth1Animation {
+  0%,
+  100% {
+    transform: scale(1) translateY(0) translateX(0);
+  }
+  50% {
+    transform: scale(1.05) translateY(-10px) translateX(-10px); /* 轻微放大并上浮 */
+  }
+}
+
+/* 为绸缎2添加缩小和浮动动画 */
+@keyframes cloth2Animation {
+  0%,
+  100% {
+    transform: scale(1) translateY(0) translateX(0);
+  }
+  50% {
+    transform: scale(0.95) translateY(10px) translateX(10px); /* 轻微缩小并下沉 */
+  }
+}
+
+.cloth1 {
+  top: -1vh;
+  right: 0;
+  /* animation: cloth1Animation 5s infinite ease-in-out; */
+}
+
+.cloth2 {
+  width: 35vw;
+  top: -3vh;
+  left: -2vw;
+  /* animation: cloth2Animation 5s infinite ease-in-out; */
+}
+
+.container {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  top: 30vh;
+  left: 9vw;
+}
+
+.container img {
+  position: static;
+}
+
+.ch {
+  margin: 0 15px;
+  width: 200px;
+  height: 200px;
+  z-index: 1;
+}
+
+/* 
+.start {
+    margin-right: 50px;
+} */
+
+.red {
+  margin-left: 300px;
+}
+
+.fire {
+  height: 88vh;
+  top: 12vh;
+  left: 39vw;
+  transition: transform 5s ease;
+}
+
+.fire:active {
+  transform: scale(2);
+}
+.fire {
+  transform: scale(1);
+  transition: transform 0.8s ease-in-out;
+}
+.fire:hover {
+  transform: scale(1.1);
+}
+/* 新增超大屏幕（4K+）*/
+@media (min-width: 2560px) {
+  .tian {
+    width: 75vw;
+    left: 15vw;
+  }
+
+  .ch {
+    width: 300px;
+    height: 300px;
+  }
+
+  .red {
+    margin-left: 450px;
+  }
+}
+
+/* 笔记本屏幕优化 */
+@media (min-width: 1601px) and (max-width: 1920px) {
+  .container {
+    left: 12vw;
+  }
+
+  .ch {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+/* 中等屏幕适配（平板横屏） */
+@media (min-width: 768px) and (max-width: 959px) {
+  body {
+    background-position: 65% center;
+  }
+
+  .tian {
+    width: 65vw;
+    left: 160px;
+  }
+
+  .container {
+    top: 25vh;
+    left: 5vw;
+  }
+
+  .ch {
+    width: 90px;
+    height: 90px;
+  }
+
+  .red {
+    margin-left: 120px;
+  }
+
+  .cloth1 {
+    width: 45vw;
+  }
+
+  .cloth2 {
+    width: 40vw;
+  }
+}
+
+/* 手机竖屏适配 */
+@media (max-width: 767px) {
+  body {
+    background-position: 70% center;
+  }
+
+  .tian {
+    width: 100vw;
+    left: 0;
+    bottom: -80vh;
+  }
+
+  .container {
+    flex-wrap: wrap;
+    top: 15vh;
+    left: 5vw;
+    width: 90vw;
+  }
+
+  .ch {
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+  }
+
+  .red {
+    margin-left: 0;
+    order: 1;
+  }
+
+  .cloth {
+    display: none; /* 小屏幕隐藏绸缎 */
+  }
+
+  .fire {
+    left: 30vw;
+    height: 60vh;
+  }
+}
+
+/* 小尺寸手机优化 */
+@media (max-width: 480px) {
+  .container {
+    top: 10vh;
+  }
+
+  .ch {
+    width: 60px;
+    height: 60px;
+  }
+
+  .fire {
+    height: 50vh;
+    left: 25vw;
+  }
+}
+
+@media (max-height: 480px) and (orientation: landscape) {
+  .container {
+    top: 15vh;
+  }
+
+  .ch {
+    width: 80px;
+    height: 80px;
+  }
+
+  .fire {
+    height: 70vh;
+    top: 20vh;
+  }
+}
+
+@media (max-width: 928px) {
+  .ch {
+    margin: 0 10px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .red {
+    margin-left: 150px;
+  }
+}

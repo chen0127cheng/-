@@ -1,0 +1,204 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "xhs", "Microsoft YaHei", sans-serif;
+  font-size: 34px;
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+  font-family: "PingFang SC-Medium";
+}
+.page {
+  width: 100%;
+  height: 730px;
+  background-size: cover; /* 背景图片覆盖整个div的宽度，高度自动调整以保持比例 */
+  background-position: center; /* 背景图片居中 */
+  background-repeat: no-repeat; /* 背景图片不重复 */
+  box-sizing: border-box; /* 确保内边距和边框不会增加元素的总宽度 */
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.page1 {
+  background-image: url("../img/英雄人物贺子珍/英雄人物-贺子珍.png");
+}
+
+.page2 {
+  background-image: url("../img/英雄人物贺子珍/英雄人物-贺子珍-1.png");
+}
+.page1 img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.first,
+.second,
+.third,
+.four,
+.five,
+.six,
+.seven,
+.ninght {
+  position: relative;
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInUp1 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.first {
+  top: 80px;
+  left: 630px;
+  opacity: 0;
+  animation: fadeInUp 1.2s ease-in-out 0.2s forwards;
+}
+.ninght {
+  top: 240px;
+  left: 570px;
+  opacity: 0;
+  animation: fadeInUp 1.2s ease-in-out 0.2s forwards;
+  width: 260px;
+}
+.eight {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  height: 360px;
+}
+
+.second {
+  top: 240px;
+  left: 270px;
+  opacity: 0;
+  animation: fadeInUp 1.2s ease-in-out 1.2s forwards;
+}
+
+.third {
+  top: 280px;
+  left: calc(100% - 470px);
+  opacity: 0;
+  animation: fadeInUp 1.2s ease-in-out 0.4s forwards;
+}
+.four {
+  top: 400px;
+  left: calc(100% - 1170px);
+  opacity: 0;
+  animation: fadeInUp 1.2s ease-in-out 1s forwards;
+}
+.five {
+  top: 350px;
+  left: 900px;
+  opacity: 0;
+  animation: fadeInUp 1.2s ease-in-out 0.6s forwards;
+}
+.seven {
+  top: 410px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  opacity: 0;
+  animation: fadeInUp 1.2s ease-in-out 1.4s forwards;
+}
+.container {
+  position: relative;
+}
+
+.main-title {
+  position: absolute;
+  top: 50px;
+  left: 40%;
+  transform: translateX(-50%);
+  width: 600px;
+  z-index: 2;
+}
+
+.sub-title {
+  position: absolute;
+  top: 620px;
+  right: 150px;
+  width: 600px;
+  z-index: 2;
+}
+
+/* 会师主图 */
+.meet-img {
+  position: absolute;
+  top: 180px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* 装饰边框 */
+.border-deco {
+  position: absolute;
+  background: url("../img/英雄人物贺子珍/遵义会议边框.png") no-repeat;
+  background-size: contain;
+  width: 700px;
+  height: 450px;
+}
+
+.top-left {
+  top: 90px;
+}
+
+.bottom-right {
+  right: -40px;
+  top: 200px;
+  transform: rotate(180deg);
+}
+
+/* 内容区块 */
+.content-block {
+  position: absolute;
+  width: 280px;
+  z-index: 3;
+}
+
+.left {
+  top: 130px;
+  left: 20px;
+}
+
+.right {
+  top: 370px;
+  right: 80px;
+}
+
+.highlight-text {
+  width: 350px;
+  font-family: "SimSun", serif;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #ebebeb;
+  margin-top: 15px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

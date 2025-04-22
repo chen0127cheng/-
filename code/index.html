@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>智启红途</title>
+    <style>
+      /* 新增点击区域样式 */
+      .click-area {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transform: translate(-50%, calc(-50% + 50px));
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        cursor: pointer;
+        z-index: 2;
+        transition: all 0.3s ease;
+      }
+
+      /* 添加悬停效果 */
+      .click-area:hover {
+        background: rgba(255, 255, 255, 0.5);
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+      }
+
+      /* 原有样式保持不变 */
+      html,
+      body {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+      }
+      body {
+        background-image: url("./img/启动页面素材/启动页面1/背景gif.gif");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        overflow: hidden;
+        position: relative;
+        transition: opacity 0.5s ease;
+      }
+      .container {
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: absolute;
+        top: 30vh;
+        left: 9vw;
+      }
+      .container img {
+        position: static;
+      }
+      .ch {
+        margin: 0 15px;
+        width: 200px;
+        height: 200px;
+        z-index: 1;
+      }
+      .red {
+        margin-left: 300px;
+      }
+      @keyframes pulse {
+        0% {
+          transform: translate(-50%, calc(-50% + 50px)) scale(1);
+        }
+        50% {
+          transform: translate(-50%, calc(-50% + 50px)) scale(1.1);
+        }
+        100% {
+          transform: translate(-50%, calc(-50% + 50px)) scale(1);
+        }
+      }
+
+      .click-area {
+        animation: pulse 2s infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 新增点击区域 -->
+    <a href="./code/catalog.html" class="click-area"></a>
+
+    <!-- 原有内容 -->
+    <div class="container">
+      <img src="./img/启动页面素材/启动页面1/智.png" alt="智" class="ch zhi" />
+      <img
+        src="./img/启动页面素材/启动页面1/启.png"
+        alt="启"
+        class="ch start"
+      />
+      <img src="./img/启动页面素材/启动页面1/红.png" alt="红" class="ch red" />
+      <img src="./img/启动页面素材/启动页面1/途.png" alt="途" class="ch tour" />
+    </div>
+  </body>
+  <script>
+    // 获取点击区域
+    const clickArea = document.querySelector(".click-area");
+
+    // 添加点击动画
+    clickArea.addEventListener("click", function (e) {
+      this.style.transform = "translate(-50%, calc(-50% + 50px)) scale(0.9)"; // 保持垂直偏移
+      setTimeout(() => {
+        this.style.transform = "translate(-50%, calc(-50% + 50px)) scale(1)";
+      }, 200);
+    });
+
+    // 可选：添加键盘回车支持
+    clickArea.addEventListener("keypress", function (e) {
+      if (e.key === "Enter") {
+        window.location.href = this.href;
+      }
+    });
+  </script>
+</html>

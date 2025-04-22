@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>邓小平</title>
+    <link rel="stylesheet" href="./dengxiaop.css" />
+  </head>
+  <body>
+    <div class="page page1">
+      <img
+        src="../img/英雄人物-邓小平/中国社会主义改革开放和现代化建设的总设计师.png"
+        alt=""
+        class="first"
+      />
+      <img
+        src="../img/英雄人物-邓小平/党的第二代中央领导集体的核心​.png"
+        alt=""
+        class="third"
+      />
+      <img
+        src="../img/英雄人物-邓小平/久经考验的共产主义战士.png"
+        alt=""
+        class="second"
+      />
+      <img
+        src="../img/英雄人物-邓小平/为世界和平发展作出重大贡献的伟大国际主义者​.png"
+        alt=""
+        class="four"
+      />
+      <img
+        src="../img/英雄人物-邓小平/中华人民共和国开国元勋.png"
+        alt=""
+        class="five"
+      />
+      <img
+        src="../img/英雄人物-邓小平/中国特色社会主义道路的开创者.png"
+        alt=""
+        class="six"
+      />
+      <img src="../img/英雄人物毛泽东/_点箭头 1.png" alt="向下" class="seven" />
+      <img
+        src="../img/英雄人物-邓小平/邓小平chuli 1.png"
+        alt="邓小平"
+        class="eight"
+      />
+      <img
+        src="../img/英雄人物-邓小平/邓小平.png"
+        alt="邓小平"
+        class="ninght"
+      />
+    </div>
+    <div class="page page2">
+      <div class="container">
+        <!-- 主图区域 -->
+        <img
+          src="../img/英雄人物-邓小平/尊重知识，尊重人才.png"
+          alt="尊重知识，尊重人才"
+          class="main-title large"
+        />
+        <img
+          src="../img/英雄人物-邓小平/解放思想，实事求是.png"
+          alt="解放思想，实事求是"
+          class="sub-title large"
+        />
+        <img
+          src="../img/英雄人物-邓小平/背景纹路.png"
+          alt=""
+          class="meet-img"
+        />
+
+        <!-- 装饰边框 -->
+        <div class="border-deco top-left"></div>
+        <div class="border-deco bottom-right"></div>
+
+        <!-- 内容区块 -->
+        <div class="content-block left">
+          <img
+            src="../img/英雄人物-邓小平/中央秘书长职能重构.png"
+            alt="职能重构"
+          />
+          <p class="highlight-text">
+            1934年12月黎平会议后接任中央秘书长，突破传统文秘工作范畴，建立前线指挥部与中央纵队间的加密通讯系统，日均处理电文量较长征初期提升300%，成功保障湘江战役后中央军委的指挥链重组。
+          </p>
+        </div>
+
+        <div class="content-block right">
+          <img
+            src="../img/英雄人物-邓小平/遵义会议的历史衔接.png"
+            alt="历史衔接"
+          />
+          <p class="highlight-text">
+            作为会议筹备组成员，组织整理前四次反围剿作战原始档案，为毛泽东军事路线提供数据支撑。会后三天内完成《中央关于反对敌人五次"围剿"的总结决议》初稿，确立新的军事领导体制
+          </p>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const imageWrappers = document.querySelectorAll(".image-wrapper");
+
+        imageWrappers.forEach((wrapper) => {
+          wrapper.addEventListener("mouseenter", () => {
+            // 移除所有激活状态
+            imageWrappers.forEach((w) => w.classList.remove("active"));
+            // 添加当前激活状态
+            wrapper.classList.add("active");
+          });
+        });
+        // 容器移出时重置所有状态
+        document
+          .querySelector(".image-container")
+          .addEventListener("mouseleave", () => {
+            imageWrappers.forEach((w) => w.classList.remove("active"));
+          });
+      });
+    </script>
+  </body>
+</html>

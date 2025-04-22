@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>贺子珍</title>
+    <link rel="stylesheet" href="./hezizhen.css" />
+  </head>
+  <div class="page page1">
+    <img
+      src="../img/英雄人物贺子珍/井冈之花​.png"
+      alt=""
+      class="first"
+    />
+    <img src="../img/英雄人物贺子珍/红色机要工作奠基人​.png" alt="" class="third" />
+    <img src="../img/英雄人物贺子珍/铁血巾帼.png" alt="" class="second" />
+    <img
+      src="../img/英雄人物贺子珍/无产阶级革命家​.png"
+      alt=""
+      class="four"
+    />
+    <img
+      src="../img/英雄人物贺子珍/中央苏区机要先锋​.png"
+      alt=""
+      class="five"
+    /> 
+    <img src="../img/英雄人物毛泽东/_点箭头 1.png" alt="向下" class="seven" />
+    <img src="../img/英雄人物贺子珍/贺子珍chuli.png" alt="贺子珍" class="eight" />
+    <img src="../img/英雄人物贺子珍/贺子珍.png" alt="" class="ninght" />
+  </div>
+    <div class="page page2">
+      <div class="container">
+        <!-- 主图区域 -->
+        <img
+          src="../img/英雄人物贺子珍/革命路上多荆棘.png"
+          alt="革命路上多荆棘"
+          class="main-title large"
+        />
+        <img
+          src="../img/英雄人物贺子珍/我自横刀护苍生.png"
+          alt="我自横刀护苍生"
+          class="sub-title large"
+        />
+        <img
+          src="../img/英雄人物贺子珍/image.png"
+          alt="hezizhen"
+          class="meet-img"
+        />
+
+        <!-- 装饰边框 -->
+        <div class="border-deco top-left"></div>
+        <div class="border-deco bottom-right"></div>
+
+        <!-- 内容区块 -->
+        <div class="content-block left">
+          <img src="../img/英雄人物-邓小平/中央秘书长职能重构.png" alt="井冈烽火的开拓者" />
+          <p class="highlight-text">
+            1927年参与永新暴动期间，组织四县农民武装攻克县城，以"草船扎筏""篝火连营"等战术迷惑敌军，成功营救80余名革命同志。1928年黄洋界保卫战中，身怀六甲仍通宵削制竹钉、堆砌滚石，参与构建防御工事体系，其事迹被写入毛泽东《西江月·井冈山》。
+          </p>
+        </div>
+
+        <div class="content-block right">
+          <img src="../img/英雄人物-邓小平/中央秘书长职能重构.png" alt="长征路上的钢铁玫瑰" />
+          <p class="highlight-text">
+            1935年4月盘县遭遇空袭时，以血肉之躯掩护重伤战友钟赤兵，全身嵌入17块弹片仍坚持行军。在毛泽东患疟疾期间（1929年），乔装寻医问药，独创"草药熏蒸疗法"助其康复。作为中央纵队干部休养连成员，创下"担架行军三千里"的医护保障纪录。
+          </p>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const imageWrappers = document.querySelectorAll(".image-wrapper");
+
+        imageWrappers.forEach((wrapper) => {
+          wrapper.addEventListener("mouseenter", () => {
+            // 移除所有激活状态
+            imageWrappers.forEach((w) => w.classList.remove("active"));
+            // 添加当前激活状态
+            wrapper.classList.add("active");
+          });
+        });
+        // 容器移出时重置所有状态
+        document
+          .querySelector(".image-container")
+          .addEventListener("mouseleave", () => {
+            imageWrappers.forEach((w) => w.classList.remove("active"));
+          });
+      });
+    </script>
+  </body>
+</html>

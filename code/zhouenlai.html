@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>周恩来</title>
+    <link rel="stylesheet" href="./zhouenlai.css" />
+  </head>
+  <body>
+    <div class="page page1">
+      <img src="../img/英雄人物-周恩来/人民的好总理.png" alt="" class="first" />
+      <img
+        src="../img/英雄人物-周恩来/中国外交事业主要奠基者​.png"
+        alt=""
+        class="third"
+      />
+      <img
+        src="../img/英雄人物-周恩来/无产阶级革命家.png"
+        alt=""
+        class="second"
+      />
+      <img
+        src="../img/英雄人物-周恩来/举轻若重的伟大公仆.png"
+        alt=""
+        class="four"
+      />
+      <img
+        src="../img/英雄人物-周恩来/党和国家卓越领导人.png"
+        alt=""
+        class="five"
+      />
+      <img
+        src="../img/英雄人物-周恩来/中国共产党人的不朽旗帜.png"
+        alt=""
+        class="six"
+      />
+      <img src="../img/英雄人物毛泽东/_点箭头 1.png" alt="向下" class="seven" />
+      <img
+        src="../img/英雄人物-周恩来/周恩来头像.png"
+        alt="周恩来"
+        class="eight"
+      />
+      <img
+        src="../img/英雄人物-周恩来/周恩来.png"
+        alt="周恩来"
+        class="ninght"
+      />
+    </div>
+    <div class="page page2">
+      <div class="container">
+        <!-- 主图区域 -->
+        <img
+          src="../img/英雄人物-周恩来/计利当计天下利.png"
+          alt="计利当计天下利"
+          class="main-title large"
+        />
+        <img
+          src="../img/英雄人物-周恩来/求名应求万世名.png"
+          alt="求名应求万世名"
+          class="sub-title large"
+        />
+        <img
+          src="../img/英雄人物-周恩来/遵义会议.png"
+          alt="遵义会议"
+          class="meet-img"
+        />
+
+        <!-- 装饰边框 -->
+        <div class="border-deco top-left"></div>
+        <div class="border-deco bottom-right"></div>
+
+        <!-- 内容区块 -->
+        <div class="content-block left">
+          <img
+            src="../img/英雄人物-周恩来/遵义会议的核心组织者.png"
+            alt="遵义会议的核心组织者"
+          />
+          <p class="highlight-text">
+            在中央红军面临生死存亡的关键时刻，周恩来主持了遵义会议前的通道会议（1934.12）、黎平会议（1934.12）和猴场会议（1935.1），为毛泽东的正确主张赢得支持奠定基础。在遵义会议上，他主动承担错误领导责任，支持毛泽东进入中央核心领导层，并负责会议组织工作，确保了历史转折的实现。
+          </p>
+        </div>
+
+        <div class="content-block right">
+          <img
+            src="../img/英雄人物-周恩来/关键战役的运筹帷幄.png"
+            alt="关键战役的运筹帷幄"
+          />
+          <p class="highlight-text">
+            在湘江战役（1934.11）中，周恩来亲临渡口指挥部队突围，特别指示保护毛泽东安全渡江。
+            山城堡战役（1936.11）中，他协调红一、二、四方面军联合作战，取得三大主力会师后首场大捷，彻底粉碎国民党军事围剿。
+            指挥东征（1936.2）与西征（1936.5），巩固陕北根据地并为迎接二、四方面军创造条件。
+          </p>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const imageWrappers = document.querySelectorAll(".image-wrapper");
+
+        imageWrappers.forEach((wrapper) => {
+          wrapper.addEventListener("mouseenter", () => {
+            // 移除所有激活状态
+            imageWrappers.forEach((w) => w.classList.remove("active"));
+            // 添加当前激活状态
+            wrapper.classList.add("active");
+          });
+        });
+        // 容器移出时重置所有状态
+        document
+          .querySelector(".image-container")
+          .addEventListener("mouseleave", () => {
+            imageWrappers.forEach((w) => w.classList.remove("active"));
+          });
+      });
+    </script>
+  </body>
+</html>

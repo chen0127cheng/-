@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>朱德</title>
+    <link rel="stylesheet" href="./zhude.css" />
+  </head>
+  <body>
+    <div class="page page1">
+      <img
+        src="../img/朱德/朱德1/抗日战争和解放战争的功勋统帅.png"
+        alt=""
+        class="first"
+      />
+      <img
+        src="../img/朱德/朱德1/中国人民解放军的主要缔造者之一.png"
+        alt=""
+        class="third"
+      />
+      <img
+        src="../img/朱德/朱德1/马克思主义军事理论家.png"
+        alt=""
+        class="second"
+      />
+      <img
+        src="../img/朱德/朱德1/中国工农红军的创始人.png"
+        alt=""
+        class="four"
+      />
+      <img
+        src="../img/朱德/朱德1/毛泽东同志的亲密战友.png"
+        alt=""
+        class="five"
+      />
+      <img
+        src="../img/朱德/朱德1/党和国家久经考验的卓越领导人.png"
+        alt=""
+        class="six"
+      />
+      <img src="../img/英雄人物毛泽东/_点箭头 1.png" alt="向下" class="seven" />
+      <img src="../img/朱德/朱德1/朱德chuli 1.png" alt="朱德" class="eight" />
+      <img src="../img/朱德/朱德1/朱德.png" alt="朱德" class="ninght" />
+    </div>
+    <div class="page page2">
+      <div class="container">
+        <!-- 主图区域 -->
+        <img
+          src="../img/朱德/朱德2/反对分裂维护团结.png"
+          alt="反对分裂"
+          class="main-title large"
+        />
+        <img
+          src="../img/朱德/朱德2/确保三大主力会师.png"
+          alt="会师标语"
+          class="sub-title large"
+        />
+        <img
+          src="../img/朱德/朱德2/三军会师图片.png"
+          alt="三军会师"
+          class="meet-img"
+        />
+
+        <!-- 装饰边框 -->
+        <div class="border-deco top-left"></div>
+        <div class="border-deco bottom-right"></div>
+
+        <!-- 内容区块 -->
+        <div class="content-block left">
+          <img src="../img/朱德/朱德2/抵制张国焘分裂行径.png" alt="抵制分裂" />
+          <p class="highlight-text">
+            在红一、四方面军会师后，张国焘企图分裂党和红
+            军。朱德虽身处被挟持的逆境，仍坚持原则，强
+            调"红军是党的军队，必须服从中央"，并团结红
+            二、四方面军将士，最终促成1936年10月三大主力
+            会师。毛泽东盛赞其"度量大如海，意志坚如钢"
+          </p>
+        </div>
+
+        <div class="content-block right">
+          <img src="../img/朱德/朱德2/全程指挥长征全局.png" alt="指挥全局" />
+          <p class="highlight-text">
+            作为唯一全程参与长征的红军最高指挥官，朱德从中
+            央红军突围到三大主力会师，始终站在指挥一线。仅
+            四渡赤水期间即签发200余份作战命令，确保各军团 协同作战
+          </p>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const imageWrappers = document.querySelectorAll(".image-wrapper");
+
+        imageWrappers.forEach((wrapper) => {
+          wrapper.addEventListener("mouseenter", () => {
+            // 移除所有激活状态
+            imageWrappers.forEach((w) => w.classList.remove("active"));
+            // 添加当前激活状态
+            wrapper.classList.add("active");
+          });
+        });
+        // 容器移出时重置所有状态
+        document
+          .querySelector(".image-container")
+          .addEventListener("mouseleave", () => {
+            imageWrappers.forEach((w) => w.classList.remove("active"));
+          });
+      });
+    </script>
+  </body>
+</html>

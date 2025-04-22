@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>郭沫若</title>
+    <link rel="stylesheet" href="./guomoruo.css" />
+  </head>
+  <body>
+    <div class="page page1">
+      <img
+        src="../img/英雄人物-郭沫若/马克思主义学术的开拓者​.png"
+        alt=""
+        class="first"
+      />
+      <img
+        src="../img/英雄人物-郭沫若/人民本位的文学巨匠.png"
+        alt=""
+        class="third"
+      />
+      <img
+        src="../img/英雄人物-郭沫若/社会主义文化事业的擎旗人.png"
+        alt=""
+        class="second"
+      />
+      <img
+        src="../img/英雄人物-郭沫若/忠诚的无产阶级文化战士.png"
+        alt=""
+        class="four"
+      />
+      <img src="../img/英雄人物毛泽东/_点箭头 1.png" alt="向下" class="seven" />
+      <img
+        src="../img/英雄人物-郭沫若/郭沫若chuli.png"
+        alt="郭沫若"
+        class="eight"
+      />
+      <img
+        src="../img/英雄人物-郭沫若/郭沫若.png"
+        alt="郭沫若"
+        class="ninght"
+      />
+    </div>
+    <div class="page page2">
+      <div class="container">
+        <!-- 主图区域 -->
+        <img
+          src="../img/英雄人物-郭沫若/郭沫若照片.png"
+          alt=""
+          class="meet-img"
+        />
+
+        <!-- 装饰边框 -->
+        <div class="border-deco bottom-right"></div>
+
+        <!-- 内容区块 -->
+        <div class="content-block right">
+          <img
+            src="../img/英雄人物-郭沫若/马克思主义理论传播与革命思想奠基.png"
+            alt="思想奠基"
+          />
+          <p class="highlight-text">
+            马克思主义理论传播与革命思想奠基​​流亡日本期间（1928-1937），郭沫若完成《中国古代社会研究》等著作，首次以马克思主义唯物史观论证中国古代存在奴隶制社会，回应了“中国特殊论”对革命的质疑。这一理论为中国共产党探索中国革命道路提供了学术支撑，间接呼应了长征期间党的理论建设需求。他通过翻译马克思主义经典著作（如《政治经济学批判》）和发表文章，向国内输入革命理论资源。1935年，他捐出译作版税资助“左联”东京支部活动，间接支援了国内文化战线的斗争
+          </p>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const imageWrappers = document.querySelectorAll(".image-wrapper");
+
+        imageWrappers.forEach((wrapper) => {
+          wrapper.addEventListener("mouseenter", () => {
+            // 移除所有激活状态
+            imageWrappers.forEach((w) => w.classList.remove("active"));
+            // 添加当前激活状态
+            wrapper.classList.add("active");
+          });
+        });
+        // 容器移出时重置所有状态
+        document
+          .querySelector(".image-container")
+          .addEventListener("mouseleave", () => {
+            imageWrappers.forEach((w) => w.classList.remove("active"));
+          });
+      });
+    </script>
+  </body>
+</html>

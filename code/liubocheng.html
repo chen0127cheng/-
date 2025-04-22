@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>刘伯承</title>
+    <link rel="stylesheet" href="./liubocheng.css" />
+  </head>
+  <body>
+    <div class="page page1">
+      <img
+        src="../img/英雄人物-刘伯承/无产阶级军事理论家.png"
+        alt=""
+        class="first"
+      />
+      <img src="../img/英雄人物-刘伯承/红军军神.png" alt="" class="third" />
+      <img src="../img/英雄人物-刘伯承/铁血儒将​.png" alt="" class="second" />
+      <img
+        src="../img/英雄人物-刘伯承/川陕苏区开拓者.png"
+        alt=""
+        class="four"
+      />
+      <img
+        src="../img/英雄人物-刘伯承/军事教育奠基人.png"
+        alt=""
+        class="five"
+      />
+      <img src="../img/英雄人物-刘伯承/战略机动大师​.png" alt="" class="six" />
+      <img src="../img/英雄人物毛泽东/_点箭头 1.png" alt="向下" class="seven" />
+      <img
+        src="../img/英雄人物-刘伯承/刘伯承chuli.png"
+        alt="刘伯承"
+        class="eight"
+      />
+      <img
+        src="../img/英雄人物-刘伯承/刘伯承.png"
+        alt="刘伯承"
+        class="ninght"
+      />
+    </div>
+    <div class="page page2">
+      <div class="container">
+        <!-- 主图区域 -->
+        <img
+          src="../img/英雄人物-刘伯承/智者胜.png"
+          alt="智者胜"
+          class="main-title large"
+        />
+        <img
+          src="../img/英雄人物-刘伯承/狭路相逢勇者胜.png"
+          alt="勇者胜"
+          class="sub-title large"
+        />
+        <img src="../img/英雄人物-刘伯承/image.png" alt="" class="meet-img" />
+
+        <!-- 装饰边框 -->
+        <div class="border-deco top-left"></div>
+        <div class="border-deco bottom-right"></div>
+
+        <!-- 内容区块 -->
+        <div class="content-block left">
+          <img
+            src="../img/英雄人物-邓小平/中央秘书长职能重构.png"
+            alt="战略佯动的总设计师"
+          />
+          <p class="highlight-text">
+            1935年4月指挥红五军团实施「巧渡金沙江」战略欺骗，以草船扎筏、篝火连营的疑兵计调动滇军，掩护中央纵队七日七夜平安渡江。同年5月制定「昼夜强行三百里」作战方案，亲自测绘泸定桥火力分布图。
+          </p>
+        </div>
+
+        <div class="content-block right">
+          <img
+            src="../img/英雄人物-邓小平/遵义会议的历史衔接.png"
+            alt="开路破围的先锋智将"
+          />
+          <p class="highlight-text">
+            湘江战役(1934.11)中临危接管红五军团，以"梯次防御战术"血战三天三夜阻滞追兵。遵义会议后率教导团智取娄山关天险(1935.1)，运用"明修栈道暗渡陈仓"战术调动黔军主力。
+          </p>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const imageWrappers = document.querySelectorAll(".image-wrapper");
+
+        imageWrappers.forEach((wrapper) => {
+          wrapper.addEventListener("mouseenter", () => {
+            // 移除所有激活状态
+            imageWrappers.forEach((w) => w.classList.remove("active"));
+            // 添加当前激活状态
+            wrapper.classList.add("active");
+          });
+        });
+        // 容器移出时重置所有状态
+        document
+          .querySelector(".image-container")
+          .addEventListener("mouseleave", () => {
+            imageWrappers.forEach((w) => w.classList.remove("active"));
+          });
+      });
+    </script>
+  </body>
+</html>
