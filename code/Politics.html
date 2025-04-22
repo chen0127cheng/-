@@ -5,18 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>精神丰碑</title>
     <style>
-      /* 保持原有CSS不变，只添加新样式 */
       body {
         margin: 0;
         padding: 0;
         background-image: url("../img/精神素材/背景.png");
-        background-size: cover; /* 背景图片覆盖整个div的宽度，高度自动调整以保持比例 */
-        background-position: center; /* 背景图片居中 */
-        background-repeat: no-repeat; /* 背景图片不重复 */
-        box-sizing: border-box; /* 确保内边距和边框不会增加元素的总宽度 */
+        background-size: contain; /* 或指定具体像素值（如 100px 100px）*/
+        background-repeat: repeat; /* 关键修改：让背景重复平铺 */
+        box-sizing: border-box;
         overflow-y: hidden;
         width: 100%;
-        height: 500px;
+        height: 100vh; /* 如果希望铺满整个视口高度，用 100vh 替代 500px */
       }
 
       @font-face {
@@ -61,6 +59,7 @@
         z-index: 1;
         transform: rotateY(0deg) translateZ(250px);
         background-image: url("../img/精神素材/Group 8.png");
+        cursor: pointer;
       }
 
       .second {
@@ -73,6 +72,7 @@
         z-index: 1;
         transform: rotateY(90deg) translateZ(250px);
         background-image: url("../img/精神素材/Group 9.png");
+        cursor: pointer;
       }
       .third {
         width: 400px;
@@ -84,6 +84,7 @@
         z-index: 1;
         transform: rotateY(180deg) translateZ(250px);
         background-image: url("../img/精神素材/Group 13.png");
+        cursor: pointer;
       }
       .fourth {
         width: 400px;
@@ -95,6 +96,7 @@
         z-index: 1;
         transform: rotateY(270deg) translateZ(250px);
         background-image: url("../img/精神素材/Group 14.png");
+        cursor: pointer;
       }
 
       /* 文字样式 */
@@ -151,19 +153,6 @@
         height: 300px; /* 悬停时高度变为300px */
       }
 
-      /* 初始化位置 */
-      /* img:nth-child(1) {
-        transform: rotateY(0deg) translateZ(250px);
-      }
-      img:nth-child(2) {
-        transform: rotateY(90deg) translateZ(250px);
-      }
-      img:nth-child(3) {
-        transform: rotateY(180deg) translateZ(250px);
-      }
-      img:nth-child(4) {
-        transform: rotateY(270deg) translateZ(250px);
-      } */
       @media (max-width: 1200px) {
         .content {
           transform: scale(0.9); /* 缩小10% */
@@ -188,72 +177,281 @@
           transform: scale(0.6); /* 缩小40% */
         }
       }
+
+      .fristChange {
+        transform: translateX(-400px) !important;
+        transition: transform 0.8s ease-in-out;
+        background-image: url("../img/精神素材/信念.png");
+        background-size: cover;
+        width: 550px;
+        height: 400px;
+        z-index: 999 !important;
+        cursor: pointer;
+      }
+      .secondChange {
+        transform: translateX(-400px) !important;
+        transition: transform 0.8s ease-in-out;
+        background-image: url("../img/精神素材/Group\ 16.png");
+        background-size: cover;
+        width: 550px;
+        height: 400px;
+        z-index: 999 !important;
+        cursor: pointer;
+      }
+      .thirdChange {
+        transform: translateX(-400px) !important;
+        transition: transform 0.8s ease-in-out;
+        background-image: url("../img/精神素材/Group\ 17.png");
+        background-size: cover;
+        width: 550px;
+        height: 400px;
+        z-index: 999 !important;
+        cursor: pointer;
+      }
+
+      .fourthChange {
+        transform: translateX(-400px) !important;
+        transition: transform 0.8s ease-in-out;
+        background-image: url("../img/精神素材/Group\ 18.png");
+        background-size: cover;
+        width: 550px;
+        height: 400px;
+        z-index: 999 !important;
+        cursor: pointer;
+      }
+      .word_box {
+        display: none;
+        width: 600px;
+        height: 500px;
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        z-index: 999;
+        /* transform: translate(-50%, -50%); */
+      }
+
+      /* 添加到<style>标签中 */
+      .word_box p {
+        font-family: stx, sans-serif;
+        width: 580px;
+        font-size: 24px;
+        color: #ffffff;
+        line-height: 1.8;
+        text-align: left;
+        /* margin: 15px 0; */
+        /* padding: 0 20px; */
+        text-indent: 2em;
+      }
+
+      .word_box h3 {
+        font-size: 30px;
+        font-weight: bold;
+        color: #ffffff;
+        text-align: center; /* 文字居中 */
+        font-family: stx, yunfeng, KaiTi, Arial, sans-serif;
+        /* margin-right: 150px; */
+      }
     </style>
   </head>
 
   <body>
-    <!-- <div class="center-pillar"></div> -->
     <div class="container">
-      <div class="frist con" onclick="window.open('Firm-beliefs.html')">
-        <div class="word-1">坚定信念——雪山草地行军</div>
-        <div class="word-2">
+      <div class="frist con" onclick="firstStand()">
+        <div class="word-1 first-word-1">坚定信念——雪山草地行军</div>
+        <div class="word-2 first-word-2">
           红军在雪山草地中展现的坚定信念，是克服极端自然条件的核心动力
         </div>
         <div class="bac"></div>
       </div>
-      <div class="second con" onclick="window.open('Forge-ahead.html')">
-        <div class="word-1">勇往直前——飞夺泸定桥</div>
-        <div class="word-2">飞夺泸定桥的壮举是红军勇往直前精神的典范。</div>
+      <div class="second con" onclick="secondStand()">
+        <div class="word-1 second-word-1">勇往直前——飞夺泸定桥</div>
+        <div class="word-2 second-word-2">
+          飞夺泸定桥的壮举是红军勇往直前精神的典范。
+        </div>
         <div class="bac"></div>
       </div>
-      <div class="third con" onclick="window.open('Sacrifice.html')">
-        <div class="word-1">不怕牺牲——湘江战役</div>
-        <div class="word-2">
+      <div class="third con" onclick="thirdStand()">
+        <div class="word-1 third-word-1">不怕牺牲——湘江战役</div>
+        <div class="word-2 third-word-2">
           湘江战役中红军的惨烈牺牲，为长征保留了革命火种。
         </div>
         <div class="bac"></div>
       </div>
-      <div class="fourth con" onclick="window.open('Self.html')">
-        <div class="word-1">独立自主——遵义会议</div>
-        <div class="word-2">遵义会议是红军独立自主制定战略的里程碑。</div>
+      <div class="fourth con" onclick="fourthStand()">
+        <div class="word-1 fourth-word-1">独立自主——遵义会议</div>
+        <div class="word-2 fourth-word-1">
+          遵义会议是红军独立自主制定战略的里程碑。
+        </div>
         <div class="bac"></div>
       </div>
-      <!-- <img src="../img/精神素材/Group 8.png" alt="" /> -->
-      <!-- <img src="../img/精神素材/Group 9.png" alt="" />
-      <img src="../img/精神素材/Group 13.png" alt="" />
-      <img src="../img/精神素材/Group 14.png" alt="" /> -->
     </div>
+    <div class="word_box"></div>
 
     <script>
       let times = 0;
+      let route = 1;
+      let isAutoRotate = true;
       const container = document.querySelector(".container");
       const imgs = document.querySelectorAll(".con");
       const rotationSpeed = 2000; // 2秒旋转一次
+      let frist = document.querySelector(".frist");
+      let first_word_1 = document.querySelector(".first-word-1");
+      let first_word_2 = document.querySelector(".first-word-2");
 
-      // 旋转函数
+      let bac = document.querySelector(".bac");
+      let word_box = document.querySelector(".word_box");
+
+      let autoRotate;
+      let isFirstActive = false;
+
       function rotateCarousel() {
+        if (route !== 1) return;
+
         times++;
         imgs.forEach((img, index) => {
           const angle = (times + index) * 90;
-          // 判断是否为270度位置
           const isBackPosition = angle % 360 === 270;
-
-          // 动态调整Z轴位置和层级
           const translateZ = isBackPosition ? 150 : 250;
           img.style.zIndex = isBackPosition ? 1 : 2;
-
           img.style.transform = `rotateY(${angle}deg) translateZ(${translateZ}px)`;
         });
       }
 
-      // 自动旋转
-      let autoRotate = setInterval(rotateCarousel, rotationSpeed);
+      function startAutoRotate() {
+        if (!autoRotate) {
+          autoRotate = setInterval(rotateCarousel, rotationSpeed);
+        }
+      }
 
-      // 可选：添加鼠标悬停暂停功能
-      container.addEventListener("mouseenter", () => clearInterval(autoRotate));
-      container.addEventListener("mouseleave", () => {
-        autoRotate = setInterval(rotateCarousel, rotationSpeed);
-      });
+      function stopAutoRotate() {
+        clearInterval(autoRotate);
+        autoRotate = null;
+      }
+
+      function enableRotation() {
+        route = 1;
+        startAutoRotate();
+      }
+
+      function disableRotation() {
+        route = 0;
+        stopAutoRotate();
+      }
+
+      function firstStand() {
+        const frist = document.querySelector(".frist");
+
+        if (frist.classList.contains("fristChange")) {
+          // 恢复状态
+          frist.classList.remove("fristChange");
+          enableRotation();
+          document
+            .querySelectorAll(".first-word-1, .first-word-2, .bac")
+            .forEach((el) => {
+              el.style.display = "block";
+            });
+          document.querySelector(".word_box").style.display = "none";
+        } else {
+          // 激活状态
+          disableRotation();
+          frist.classList.add("fristChange");
+          document
+            .querySelectorAll(".first-word-1, .first-word-2, .bac")
+            .forEach((el) => {
+              el.style.display = "none";
+            });
+          document.querySelector(".word_box").style.display = "block";
+          word_box.innerHTML =
+            "<h3>信念是支撑红军克服困难的核心动力</h3><p>1935年，中央红军翻越海拔4000米以上的夹金山、梦笔山等雪山，穿越松潘草地。战士们身着单衣、草鞋，面对缺氧、严寒和沼泽，日均行军30公里，许多人因饥饿或失温牺牲。例如，红四方面军战士贺岳年仅12岁，身患重病仍坚持行军，用双脚丈量两万五千里。此间，“北上抗日”的信念凝聚全军，毛泽东写下“更喜岷山千里雪，三军过后尽开颜”的豪迈诗句，彰显信念的力量。</p>";
+        }
+      }
+      function secondStand() {
+        const second = document.querySelector(".second");
+
+        if (second.classList.contains("secondChange")) {
+          // 恢复状态
+          second.classList.remove("secondChange");
+          enableRotation();
+          document
+            .querySelectorAll(".second-word-1, .second-word-2, .bac")
+            .forEach((el) => {
+              el.style.display = "block";
+            });
+          document.querySelector(".word_box").style.display = "none";
+        } else {
+          // 激活状态
+          disableRotation();
+          second.classList.add("secondChange");
+          document
+            .querySelectorAll(".second-word-1, .second-word-2, .bac")
+            .forEach((el) => {
+              el.style.display = "none";
+            });
+          document.querySelector(".word_box").style.display = "block";
+          word_box.innerHTML =
+            "<h3>勇往直前是红军突破封锁、取得胜利的关键</h3><p>1935年5月，红军为抢渡大渡河，一昼夜疾行120公里抵达泸定桥。面对被拆除桥板的13根铁索和敌军机枪封锁，22名突击队员以血肉之躯攀索强攻。战士廖大珠等率先冲过火墙，用生命开辟通道。此役粉碎了蒋介石“让朱毛成为石达开第二”的企图，被西方称为“人类战争史上的奇迹”。毛泽东评价：“红军不是靠运气，而是靠勇气和决心！”。</p>";
+        }
+      }
+      function thirdStand() {
+        const third = document.querySelector(".third");
+
+        if (third.classList.contains("thirdChange")) {
+          // 恢复状态
+          third.classList.remove("thirdChange");
+          enableRotation();
+          document
+            .querySelectorAll(".third-word-1, .third-word-2, .bac")
+            .forEach((el) => {
+              el.style.display = "block";
+            });
+          document.querySelector(".word_box").style.display = "none";
+        } else {
+          // 激活状态
+          disableRotation();
+          third.classList.add("thirdChange");
+          document
+            .querySelectorAll(".third-word-1, .third-word-2, .bac")
+            .forEach((el) => {
+              el.style.display = "none";
+            });
+          document.querySelector(".word_box").style.display = "block";
+          word_box.innerHTML =
+            "<h3>不怕牺牲的精神是红军战胜强敌的重要保障</h3><p>1934年11月，红军在湘江遭遇国民党重兵围堵。红34师作为后卫部队，以6000余人阻击15万敌军四昼夜，最终全军覆没。师长陈树湘负伤被俘后断肠明志，战士遗体堵塞江流，民间遂有“三年不饮湘江水，十年不食湘江鱼”的悲歌。此役后，红军从8.6万人锐减至3万，但以巨大牺牲突破了第四道封锁线，为遵义会议的转折奠定基础。</p>";
+        }
+      }
+
+      function fourthStand() {
+        const fourth = document.querySelector(".fourth");
+
+        if (fourth.classList.contains("fourthChange")) {
+          // 恢复状态
+          fourth.classList.remove("fourthChange");
+          enableRotation();
+          document
+            .querySelectorAll(".fourth-word-1, .fourth-word-2, .bac")
+            .forEach((el) => {
+              el.style.display = "block";
+            });
+          document.querySelector(".word_box").style.display = "none";
+        } else {
+          // 激活状态
+          disableRotation();
+          fourth.classList.add("fourthChange");
+          document
+            .querySelectorAll(".fourth-word-1, .fourth-word-2, .bac")
+            .forEach((el) => {
+              el.style.display = "none";
+            });
+          document.querySelector(".word_box").style.display = "block";
+          word_box.innerHTML =
+            "<h3>独立自主是红军走向胜利的重要思想武器</h3><p> 1935年1月，遵义会议批判了“左”倾教条主义错误，确立毛泽东的领导地位。会议后，红军摒弃依赖外部指示的被动策略，灵活运用“四渡赤水”等战术，以3万兵力牵制40万敌军，跳出包围圈。例如，红军佯攻贵阳迫使蒋介石调兵回援，随即西进云南巧渡金沙江，彻底扭转战局。邓小平曾说：“从遵义会议开始，党才真正形成了独立自主的领导核心。”。</p>";
+        }
+      }
+
+      // 初始化
+      startAutoRotate();
+      container.addEventListener("mouseenter", stopAutoRotate);
+      container.addEventListener("mouseleave", startAutoRotate);
     </script>
   </body>
 </html>
